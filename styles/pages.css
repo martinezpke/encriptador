@@ -1,0 +1,39 @@
+*{
+    background-color: #E9ECF8;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 0;
+    gap: 40px;
+}
+
+.logo img {
+/*     position: absolute; */
+    width: 120px;
+    height: 48px;
+/*     left: 40px;
+    top: 40px; */
+}
+
+.container__body{
+    display: flex;
+    
+}
+
+.container__left{
+
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.guia {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+}
