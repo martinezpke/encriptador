@@ -5,9 +5,13 @@ var text_result = document.querySelector(".text__result");
 var container_result = document.querySelectorAll(".ocultar");
 
 function encriptarBtn() {
+	// ocultamos el muñeco y párrafos
 	ocurtar()
 	var input = document.getElementById("container__text").value;
+
+	//encriptamos el texto
 	var output = encriptar(input);
+
 	text_result.textContent = output;
 	document.getElementById("container__text").value = "";
 }
@@ -40,7 +44,18 @@ function desencriptar(text) {
 	return text
 }
 
-function ocurtar(){
+/* 
+
+	La función ocultar() se encarga de ocultar elementos del DOM agregando o 
+	quitando clases CSS a través del método classList.add(). 
+	En este caso, se están agregando las clases "ocultar" 
+	a los elementos muñeco, text_1 y text_2, y las clases "activate" a 
+	los elementos container_result[0] y container_result[1]. 
+	También se está agregando la clase "container__result" al elemento text_result.
+
+*/
+
+function ocurtar() {
 	muneco.classList.add("ocultar");
 	text_1.classList.add("ocultar");
 	text_2.classList.add("ocultar");
@@ -50,11 +65,17 @@ function ocurtar(){
 
 }
 
+
 const btnCopy = document.getElementById('btn__copy');
-	btnCopy.addEventListener('click', copiar = () => {
+btnCopy.addEventListener('click', copiar = () => {
 	var content = document.querySelector('.text__result').textContent;
 	navigator.clipboard.writeText(content)
 	alert('Texto copiado: ' + content);
-  });
+});
 
-  
+/* 
+	Este bloque de código se encarga de seleccionar el botón con el id "btn__copy" y agregar un event listener para el evento 'click'. 
+	Cuando se hace clic en el botón, se ejecuta una función anónima que realiza las siguientes acciones: selecciona el contenido de un 
+	elemento con la clase "text__result" a través del método textContent, lo copia al portapapeles utilizando navigator.clipboard.writeText(), 
+	y muestra una alerta con el contenido copiado.
+*/
