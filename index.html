@@ -1,35 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/reset200802.css" />
-    <link rel="stylesheet" href="./styles/pages.css" />
-    <title>Encriptador</title>
-  </head>
-  <body>
-    <header>
-      <div class="logo">
-        <img src="./utilities/Logo2x.png" alt="Logo" >
-      </div>
-    </header>
 
-    <div class="container__body">
-      <div class="container__left">
-        <textarea name="container__text" id="container__text" cols="30" rows="10"></textarea>
-        <div class="guia">
-          <span><i>🔥</i></span>
-          <label for="guia">Solo letras minúsculas y sin acentos</label>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./styles/reset200802.css" />
+  <link rel="stylesheet" href="./styles/pages.css" />
+  <title>Encriptador</title>
+</head>
+
+<body>
+  <main>
+    <section class="section__1">
+      <header>
+        <div class="logo">
+          <img src="./utilities/Logo2x.svg" alt="Logo" />
         </div>
-        <div class="container__btn">
-          <button onclick="encriptarBtn()">Encriptar</button>
-          <button onclick="desencriptarBtn()">Desencriptar</button>
+      </header>
+
+      <div class="container__letf">
+        <textarea name="containertext" id="containertext" cols="30" rows="10"
+          placeholder="Ingrese el texto aqui"></textarea>
+
+        <div class="container_btn">
+          <div class="guia">
+            <img src="./utilities/bi_exclamation-circle-fill.svg" alt="alerta icon" />
+            <label for="guia">Solo letras minúsculas y sin acentos</label>
+          </div>
+
+          <div class="style__btn">
+            <button onclick="encriptarBtn()">Encriptar</button>
+            <button onclick="desencriptarBtn()">Desencriptar</button>
+          </div>
         </div>
       </div>
-      
+    </section>
 
-    </div>
-  </body>
-  <script src="./assets/script.js"></script>
+    <section class="section__2">
+      <div class="container__right">
+        <div class="img__muneco">
+          <img src="./utilities/Muñeco1x.svg" alt="muñeco" />
+        </div>
+        <p>Ningún mensaje fue encontrado</p>
+        <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+
+      </div>
+    </section>
+  </main>
+</body>
+<script src="./assets/script.js"></script>
+
 </html>
