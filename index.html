@@ -15,13 +15,15 @@
     <section class="section__1">
       <header>
         <div class="logo">
-          <img src="./utilities/Logo2x.svg" alt="Logo" />
+          <a href="index.html"><img src="./utilities/Logo2x.svg" alt="Logo" /></a>
+          
         </div>
       </header>
 
       <div class="container__letf">
-        <textarea name="containertext" id="containertext" cols="30" rows="10"
-          placeholder="Ingrese el texto aqui"></textarea>
+        <textarea name="containertext" id="container__text"  cols="30" rows="10"
+          placeholder="Ingrese el texto aquí 🙌" onkeypress="return (event.charCode >= 97 && event.charCode <= 122 || event.charCode == 32 || event.charCode == 241)" min=1
+          "></textarea>
 
         <div class="container_btn">
           <div class="guia">
@@ -42,9 +44,15 @@
         <div class="img__muneco">
           <img src="./utilities/Muñeco1x.svg" alt="muñeco" />
         </div>
-        <p>Ningún mensaje fue encontrado</p>
-        <p>Ingresa el texto que desees encriptar o desencriptar.</p>
-
+        <p id="text_1">Ningún mensaje fue encontrado</p>
+        <p id="text_2">Ingresa el texto que desees encriptar o desencriptar.</p>
+        
+        <div class="ocultar">
+          <p class="text__result"></p>
+        </div>
+        <div class="ocultar">
+          <button id="btn__copy" >Copiar</button>
+        </div>
       </div>
     </section>
   </main>
