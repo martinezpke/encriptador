@@ -79,6 +79,16 @@ main {
     gap: 30px;
 }
 
+.img__muneco {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.img__muneco img {
+    width: auto;
+}
+
 #text_1 {
     width: 336px;
     height: 58px;
@@ -190,22 +200,25 @@ main {
 }
 
 .ocultar {
-    
+
     width: 100%;
     display: none;
 }
 
-.activate{
+.activate {
     display: flex;
+    width: 100%;
+    
 }
 
 .container__result {
     display: flex;
+    justify-content: center;
     padding: 20px;
     width: 100%;
     height: 500px;
     overflow: auto;
-
+    word-wrap:  break-word;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -215,4 +228,199 @@ main {
     /* Gray/gray-400 */
     color: #495057;
     transition: 0.3s ease;
+}
+
+
+::-webkit-scrollbar {
+    background-color: #f5f5f5;
+    width: 10px;
+    border-radius: 15px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #AAB2D5;
+    border-radius: 15px;
+  }
+  
+      
+
+@media screen and (max-width: 768px) {
+    /* Estilos para dispositivos móviles */
+
+    main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    } 
+
+    .section__1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .section__2 {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .container__letf {
+        padding: 0;
+        width: 100%;
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .container__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+        height: auto;
+        gap: 10px;
+    }
+
+    .img__muneco img {
+        display: none;
+    }
+
+    #text_1 {
+        width: auto;
+        height: auto;
+    }
+
+    #text_2 {
+        width: auto;
+        height: auto;
+    }
+
+    .container__letf textarea {
+        border: 0;
+        width: 60%;
+        height: 140px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 150%;
+        resize: none;
+        color: #0A3871;
+    }
+
+    .container_btn {
+        display: flex;
+        width: 60%;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 5px;
+    }
+
+    .container__result {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0;
+        width: 100%;
+        height: auto;
+        overflow: auto;
+        word-wrap: break-word;
+       
+    }
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    } 
+
+    .section__1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .section__2 {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .container__letf {
+        padding: 0;
+        width: 100%;
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .container__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+        height: auto;
+        gap: 10px;
+    }
+
+    .img__muneco img {
+        display: none;
+    }
+
+    #text_1 {
+        width: auto;
+        height: auto;
+    }
+
+    #text_2 {
+        width: auto;
+        height: auto;
+    }
+
+    .container__letf textarea {
+        border: 0;
+        width: 60%;
+        height: 140px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 150%;
+        resize: none;
+        color: #0A3871;
+    }
+
+    .container_btn {
+        display: flex;
+        width: 60%;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 5px;
+    }
+
+    .container__result {
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        padding: 20px;
+        width: 100%;
+        height: auto;
+        overflow: auto;
+        word-wrap: break-word;
+       
+    }
 }
