@@ -65,17 +65,23 @@ function ocurtar() {
 
 }
 
-
-const btnCopy = document.getElementById('btn__copy');
-btnCopy.addEventListener('click', copiar = () => {
-	var content = document.querySelector('.text__result').textContent;
-	navigator.clipboard.writeText(content)
-	alert('Texto copiado: ' + content);
-});
-
 /* 
 	Este bloque de código se encarga de seleccionar el botón con el id "btn__copy" y agregar un event listener para el evento 'click'. 
 	Cuando se hace clic en el botón, se ejecuta una función anónima que realiza las siguientes acciones: selecciona el contenido de un 
 	elemento con la clase "text__result" a través del método textContent, lo copia al portapapeles utilizando navigator.clipboard.writeText(), 
 	y muestra una alerta con el contenido copiado.
 */
+
+
+const btnCopy = document.getElementById('btn__copy');
+btnCopy.addEventListener('click', copiar = () => {
+	navigator.permissions.query({ name: "clipboard-write" }).then((result) => {
+		if (result.state === "granted" || result.state === "prompt") {
+			/* write to the clipboard now */
+			var content = document.querySelector('.text__result').textContent;
+			navigator.clipboard.writeText(content)
+			alert('Texto copiado: ' + content);
+		}
+	});
+});
+

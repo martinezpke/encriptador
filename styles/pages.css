@@ -200,7 +200,6 @@ main {
 }
 
 .ocultar {
-
     width: 100%;
     display: none;
 }
@@ -213,7 +212,8 @@ main {
 
 .container__result {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 20px;
     width: 100%;
     height: 500px;
