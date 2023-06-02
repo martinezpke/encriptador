@@ -11,9 +11,11 @@ function encriptarBtn() {
 
 	//encriptamos el texto
 	var output = encriptar(input);
-
 	text_result.textContent = output;
+
 	document.getElementById("container__text").value = "";
+	const copyButton = document.getElementById("btn__copy");
+	copyButton.innerText = "Copiar";
 }
 
 function desencriptarBtn() {
@@ -21,6 +23,10 @@ function desencriptarBtn() {
 	var input = document.getElementById("container__text").value;
 	var output = desencriptar(input);
 	text_result.textContent = output;
+
+	document.getElementById("container__text").value = "";
+	const copyButton = document.getElementById("btn__copy");
+	copyButton.innerText = "Copiar";
 }
 
 function encriptar(text) {
@@ -75,28 +81,45 @@ function ocurtar() {
 
 const btnCopy = document.getElementById('btn__copy');
 btnCopy.addEventListener('click', copiar = () => {
-
 	navigator.permissions.query({ name: "clipboard-write" }).then((result) => {
 		if (result.state === "granted" || result.state === "prompt") {
-			/* write to the clipboard now  */
+			// Seleccionar el texto o contenido que deseas copiar
+			var content = document.querySelector('.text__result').textContent;
+
+			// Crear un elemento temporal (input) para almacenar el contenido
+			const tempInput = document.createElement("input");
+			tempInput.value = content;
+
+			// Agregar el elemento temporal al documento
+			document.body.appendChild(tempInput);
+
+			// Seleccionar y copiar el contenido del elemento temporal
+			tempInput.select();
+			document.execCommand("copy");
+
+			// Remover el elemento temporal del documento
+			document.body.removeChild(tempInput);
+
+			// Opcional: Cambiar el texto del botón después de copiar
+			const copyButton = document.getElementById("btn__copy");
+			copyButton.innerText = "¡Copiado!";
+		}
+	});
+
+
+
+	/* navigator.permissions.query({ name: "clipboard-write" }).then((result) => {
+		if (result.state === "granted" || result.state === "prompt") {
 			var content = document.querySelector('.text__result').textContent;
 			navigator.clipboard
-				.readText()
+				.writeText(content)
+				alert("Copiado con éxito");
 				.then(
 					(clipText) => (document.getElementById("container__text").value = content)
 
 				);
-					
 		}
-	}); 
+	});  */
 
 });
-
-/* console.log(content);
-	navigator.clipboard
-		.writeText(content)
-		.then(
-			(clipText) => (document.getElementById("container__text").value += content)
-
-		); */
 
