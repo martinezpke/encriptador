@@ -5,6 +5,18 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="
+    Un encriptador de texto es una herramienta que toma un mensaje o texto de entrada y lo transforma en una versión 
+    cifrada utilizando algún tipo de algoritmo o clave. El objetivo es garantizar la confidencialidad de la información al 
+    hacerla ilegible para aquellos que no tienen la clave de desencriptación."
+  >
+  <meta name="keywords" content="Encriptado, Desencriptado, Cifrado, Descifrado, Algoritmo de encriptación, Algoritmo de desencriptación, Clave de encriptado, Clave de desencriptado, Texto cifrado, Texto original, Seguridad de datos, Confidencialidad, Criptografía, Funciones hash, Cifrado simétrico, Cifrado asimétrico, AES, RSA, HMAC, Criptografía de clave pública">
+  <meta name="author" content="Kevin Martinez Palmieri">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
   <link rel="stylesheet" href="./styles/reset200802.css" />
   <link rel="stylesheet" href="./styles/pages.css" />
   <title>Encriptador</title>
@@ -16,16 +28,16 @@
       <header>
         <div class="logo">
           <a href="index.html"><img src="./utilities/Logo2x.svg" alt="Logo" /></a>
-          
+
         </div>
       </header>
 
       <div class="container__letf">
-        <textarea name="containertext" id="container__text"  cols="30" rows="10"
-          placeholder="Ingrese el texto aquí 🙌" onkeypress="return (event.charCode >= 97 && event.charCode <= 122 || event.charCode == 32 || event.charCode == 241)" min=1
-          "></textarea>
+        <textarea name="containertext" id="container__text" cols="30" rows="10" placeholder="Ingrese el texto aquí 🙌"
+          onkeypress="return (event.charCode >= 97 && event.charCode <= 122 || event.charCode == 32 || event.charCode == 241)"
+          min=1 "></textarea>
 
-        <div class="container_btn">
+        <div class=" container_btn">
           <div class="guia">
             <img src="./utilities/bi_exclamation-circle-fill.svg" alt="alerta icon" />
             <label for="guia">Solo letras minúsculas y sin acentos</label>
