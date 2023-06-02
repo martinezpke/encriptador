@@ -75,13 +75,28 @@ function ocurtar() {
 
 const btnCopy = document.getElementById('btn__copy');
 btnCopy.addEventListener('click', copiar = () => {
+
 	navigator.permissions.query({ name: "clipboard-write" }).then((result) => {
 		if (result.state === "granted" || result.state === "prompt") {
-			/* write to the clipboard now */
+			/* write to the clipboard now  */
 			var content = document.querySelector('.text__result').textContent;
-			navigator.clipboard.writeText(content)
-			alert('Texto copiado: ' + content);
+			navigator.clipboard
+				.readText()
+				.then(
+					(clipText) => (document.getElementById("container__text").value = content)
+
+				);
+					
 		}
-	});
+	}); 
+
 });
+
+/* console.log(content);
+	navigator.clipboard
+		.writeText(content)
+		.then(
+			(clipText) => (document.getElementById("container__text").value += content)
+
+		); */
 
